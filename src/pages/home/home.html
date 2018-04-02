@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>TOPTEAM</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page">
+
+  <ion-card (click)="goToCalcParedePage()">
+    <img src="assets/imgs/parede.png" />
+    <div class="card-title">CÁLCULO DE PAREDE</div>
+  </ion-card>
+
+  <ion-card (click)="goToCalcForroPage()">
+    <img src="assets/imgs/forro.png" />
+    <div class="card-title">CÁLCULO DE FORRO</div>
+  </ion-card>
+
+  <ion-card (click)="goToCalcRevestimentoPage()">
+    <img src="assets/imgs/revestimento.png" />
+    <div class="card-title">CÁLCULO DE REVESTIMENTO</div>
+  </ion-card>
+
+</ion-content>
+
+//Funcionamento do compartilhamento neste link: https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin#2-screenshots
+<ion-fab right bottom>
+  <button ion-fab mini color="primary">
+    <ion-icon name="md-share"></ion-icon>
+  </button>
+  <ion-fab-list side="top">
+    <button ion-fab onclick="window.plugins.socialsharing.shareViaFacebook('Obtenha os cálculos de Drywall de maneira rápida #topteam', null /* img */, null /* 'http://www.zmob.com.br' */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">
+      <ion-icon name="logo-facebook"></ion-icon>
+    </button>
+
+    <button ion-fab onclick="window.plugins.socialsharing.shareViaTwitter('Obtenha os cálculos de Drywall de maneira rápida #topteam', null /* img */, 'http://www.zmob.com.br')">
+      <ion-icon name="logo-twitter"></ion-icon>
+    </button>
+
+    <button ion-fab onclick="window.plugins.socialsharing.shareViaWhatsApp('Obtenha os cálculos de Drywall de maneira rápida #topteam', null /* img */, null /* http://www.zmob.com.br */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">
+      <ion-icon name="logo-whatsapp"></ion-icon>
+    </button>
+  </ion-fab-list>
+</ion-fab>
